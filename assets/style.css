@@ -1,0 +1,40 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: bisque;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100;
+}
+
+.container {
+    max-width: 500px;
+    background-color: rgb(177, 169, 148);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#answer-buttons button {
+    padding: 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: aliceblue;
+    cursor: pointer;
+}
+
+#submit-btn {
+    padding: 10px;
+    border: none;
+    background-color: azure;
+    color: #090909;
+    border-radius: 5px;
+    cursor: pointer;
+}
