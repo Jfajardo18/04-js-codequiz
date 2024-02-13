@@ -127,6 +127,16 @@ function startTimer() {
     submitButton.disabled = true;
   }
 
-  
+  function displayHighScores() {
+    const scores = JSON.parse(localStorage.getItem('scores')) || [];
+    scores.sort((a,b) => b.score - a.score); //should sort socres in a descending order..
 
+    highScoresContainer.innerHTML = '<h2>Top 5 Scores</h2>'; //display the top 5 scores
+    for (let i = o; i < Math.min(scores.length, 5); i++) {
+        const scoreEntry = document.createElement('div');
+        scoreEntry.textContent = `${i + 1}. ${scores[i].initials}; ${scores[i].score}`;
+        highScoresContainer.appendChild(scoreEntry);
+    }
+  }
+  displayHighScores();
 });
